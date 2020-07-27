@@ -1,2 +1,2 @@
-# Distributed-RPC-network-framework
-Distributed RPC network framework
+# Distributed RPC communication framework
+Distributed RPC communication framework
