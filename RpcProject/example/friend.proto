@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package myfriend;
+
+option cc_generic_services=true;
+
+message resultCode {
+    int32 errcode= 1;
+    bytes errmsg=2;
+}
+
+message FriendRequest {
+    bytes name= 1;
+    bytes pws= 2;
+}
+
+message FriendResponse {
+    resultCode result = 1;
+    repeated bytes friends=2;
+}
+
+
+service FriendServiceRpc {
+    rpc getFriendlist (FriendRequest) returns (FriendResponse);
+}
+
